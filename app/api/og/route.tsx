@@ -13,7 +13,6 @@ const interBold = fetch(new URL('./Inter-Bold.ttf', import.meta.url)).then((res)
 
 export async function GET(req: NextRequest): Promise<Response | ImageResponse> {
   try {
-    const [regularFont, boldFont] = await Promise.all([interRegular, interBold]);
 
     const { searchParams } = new URL(req.url);
 
@@ -43,13 +42,11 @@ export async function GET(req: NextRequest): Promise<Response | ImageResponse> {
         fonts: [
           {
             name: 'Inter',
-            data: regularFont,
             style: 'normal',
             weight: 400
           },
           {
             name: 'Inter',
-            data: boldFont,
             style: 'normal',
             weight: 700
           }
