@@ -5,7 +5,8 @@ module.exports = {
     ignoreDuringBuilds: true
   },
   experimental: {
-    appDir: true
+    appDir: true,
+    runtime: 'edge'
   },
   images: {
     formats: ['image/avif', 'image/webp'],
