@@ -31,18 +31,7 @@ export async function GET(req: NextRequest): Promise<Response | ImageResponse> {
       {
         width: 1200,
         height: 630,
-        fonts: [
-          {
-            name: 'Inter',
-            style: 'normal',
-            weight: 400
-          },
-          {
-            name: 'Inter',
-            style: 'normal',
-            weight: 700
-          }
-        ]
+        
       }
     );
   } catch (e) {
